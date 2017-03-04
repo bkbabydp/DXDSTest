@@ -6,10 +6,10 @@
 </head>
 <body>
     <p>Welcome to Restful api (Flask version)</p>
-
+    <p>Example:</p>
     <ul>
-        <li><a href=" {{ url_for('products.index') }} ">1</a></li>
-        <li><a href=" {{ url_for('products.show', id_=1 ) }} ">1</a></li>
+        <li><a href=" {{ url_for('products.index') }} ">{{ url_for('products.index') }}</a></li>
+        <li><a href=" {{ url_for('products.show', id_=1 ) }} ">{{ url_for('products.show', id_=1 ) }}</a></li>
     </ul>
 </body>
 </html>

@@ -20,26 +20,26 @@
 ---
 进入当前目录：
 
-    ./server.py db init
-    ./server.py db migrate
-    ./server.py db upgrade
+    ./manager.py db init
+    ./manager.py db migrate
+    ./manager.py db upgrade
 
 运行
 ---
 进入当前目录：
 
-    ./server.py runserver
+    ./manager.py runserver
     
 其他帮助
 ---
 
-    ./server.py
+    ./manager.py
 
 测试
 ---
 进入当前目录：
 
-    ./server.py test
+    ./manager.py test
     
 用python测试：
 
