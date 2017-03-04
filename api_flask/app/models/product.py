@@ -15,11 +15,12 @@ class Product(db.Model):
     # 产品名
     name = db.Column(db.String, nullable=False)
     # 提交时间
-    submit_time = db.Column(db.DateTime, default=datetime.now())
+    submit_time = db.Column(db.DateTime, nullable=False)
 
     def __init__(self, name: str):
         self.name = name
         self.product_id = Product.create_product_id()
+        self.submit_time = datetime.now()
 
     def __repr__(self):
         return '<%s %s %s>' % (self.__class__, self.product_id, self.name)
@@ -28,7 +29,8 @@ class Product(db.Model):
         return dict(
             id=self.id_,
             product_id=self.product_id,
-            name=self.name
+            name=self.name,
+            submit_time=self.submit_time
         )
 
     @staticmethod
